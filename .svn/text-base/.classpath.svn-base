@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/base/minim/jl1.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/minim/jsminim.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/minim/minim-spi.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/minim/minim.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/minim/mp3spi1.9.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/minim/tritonus_aos.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/minim/tritonus_share.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/minim"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt-natives-linux-amd64.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt-natives-linux-i586.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt-natives-macosx-ppc.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt-natives-macosx-universal.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt-natives-windows-amd64.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt-natives-windows-i586.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/gluegen-rt.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl-natives-linux-amd64.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl-natives-linux-i586.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl-natives-macosx-ppc.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl-natives-macosx-universal.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl-natives-windows-amd64.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl-natives-windows-i586.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/jogl.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/opengl/opengl.jar" sourcepath="/Applications/Processing.app/Contents/Resources/Java/libraries/opengl/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/opengl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/core/ant-launcher.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/core"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/core/ant.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/core"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/base/core/core.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/base/core"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/user/fullscreen/fullscreen.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/user/fullscreen"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/user/fullscreen/fullscreen_GLsupport.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/user/fullscreen"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/user/tuio/libTUIO.jar" sourcepath="/Users/breme/Processing/libraries/tuio/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/user/tuio"/>
+			<attribute name="javadoc_location" value="file:/Users/breme/Processing/libraries/tuio/reference/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/user/tuio/TUIO.jar" sourcepath="/Users/breme/Processing/libraries/tuio/src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="MobileDisco/lib/user/tuio"/>
+			<attribute name="javadoc_location" value="file:/Users/breme/Processing/libraries/tuio/reference/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

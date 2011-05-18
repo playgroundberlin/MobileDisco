@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/mobiledisco/!svn/ver/10/lib/base/core
+END
+revisions.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/mobiledisco/!svn/ver/10/lib/base/core/revisions.txt
+END
+core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mobiledisco/!svn/ver/10/lib/base/core/core.jar
+END
+libquaqua64.jnilib
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/mobiledisco/!svn/ver/10/lib/base/core/libquaqua64.jnilib
+END
+libquaqua.jnilib
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/mobiledisco/!svn/ver/10/lib/base/core/libquaqua.jnilib
+END
+ant-launcher.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/mobiledisco/!svn/ver/10/lib/base/core/ant-launcher.jar
+END
+ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/mobiledisco/!svn/ver/10/lib/base/core/ant.jar
+END
