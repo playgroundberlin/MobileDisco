@@ -34,7 +34,7 @@ public class MobileDisco extends PApplet {
 	PImage b;
 	PImage[] cursor;
 
-	////////////////////// SETUP /////////////////////////////////////
+	////////////////////// SETUP //////////////////////////////////////
 	
 	float cursor_size = 15;
 	float object_size = 60;
@@ -48,6 +48,7 @@ public class MobileDisco extends PApplet {
 	int shiftX = 250; // verschiebung auf der x achse zur ellipse
 	int black = color(0, 0, 0); 
 	int pink = color(226, 0, 122);
+	String mp3folder = "mp3/"; // ordner mit den songs
 	
 	///////////////////////////////////////////////////////////////////
 
@@ -61,17 +62,18 @@ public class MobileDisco extends PApplet {
 	
 	public void setup() {
 		size(1280, 800, OPENGL);
+		smooth();
 		hint(ENABLE_OPENGL_4X_SMOOTH);
+	    hint(DISABLE_OPENGL_2X_SMOOTH);
 		noStroke();
 		fill(255);
 		loop();
 		frameRate(30);
-		smooth();
 		font = loadFont("font.vlw"); 
 		// hintergrundbild laden
 		b = loadImage("gui.png");
 		cursor = new PImage[7];
-		for(int i = 0; i < 7; i++ ){
+		for(int i = 0; i < 2; i++ ){
 			  cursor[i] = loadImage("cursor" + i + ".png");
 	  }
 		
@@ -79,7 +81,7 @@ public class MobileDisco extends PApplet {
 		tuioClient = new TuioProcessing(this);
 		//println("the sketch path is "+sketchPath);		
 		//fileNames = listFileNames(sketchPath, txtFilter);
-		fileNames = listFileNames("mp3/", txtFilter);
+		fileNames = listFileNames(mp3folder, txtFilter);
 
 		//println(fileNames);
 		println("Loaded " +fileNames.length +" tracks in total");
@@ -89,7 +91,7 @@ public class MobileDisco extends PApplet {
 		// container erstellen
 		trackList = new ArrayList();
 		for (int i = 0; i < fileNames.length; i++) {
-			trackList.add(new trackContainer(this, m, fileNames[i]));
+			trackList.add(new trackContainer(this, m, mp3folder+fileNames[i]));
 		}
 		
 		playList = new ArrayList();
@@ -97,11 +99,10 @@ public class MobileDisco extends PApplet {
 	}
 
 	public void draw() {
-		//background(255);
+		imageMode(CORNER);
 		image(b, 0, 0);
 		fill(0);
-		//ellipse(width/2, height/2, 550, 550);
-		myPrinterUpdate();
+		myPrinterUpdate(); // schreibt playlist und status
 		
 		textAlign(CENTER);
 		textFont(font);
@@ -115,8 +116,7 @@ public class MobileDisco extends PApplet {
 				trackContainer myTrack = (trackContainer) trackList.get(tobj.getSymbolID());
 				pushMatrix();
 				translate(tobj.getScreenX(width)+shiftX, tobj.getScreenY(height));
-				myTrack.drawCursor(dist(tobj.getScreenX(width),
-						tobj.getScreenY(height), width / 2, height / 2));
+				myTrack.drawCursor();
 				popMatrix();
 			}
 		}
@@ -140,10 +140,10 @@ public class MobileDisco extends PApplet {
 					.getSymbolID());
 			myTrack.load(); // player laden
 		} else {
-			println("object " + tobj.getSymbolID()
-					+ " is not assigned to a song.");
-			myPrinter("object " + tobj.getSymbolID()
-					+ " is not assigned to a song.");
+			println("Object " + tobj.getSymbolID()
+					+ " is not assigned to a song");
+			myPrinter("Object " + tobj.getSymbolID()
+					+ " is not assigned to a song");
 
 		}
 	}
