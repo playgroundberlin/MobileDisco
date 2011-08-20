@@ -14,7 +14,7 @@ import java.util.Vector;
 public class MobileDisco extends PApplet {
 	
 	public static void main(String _args[]) {
-		boolean FULLSCREEN = false;
+		boolean FULLSCREEN = true;
 		if (FULLSCREEN  == true) {
 			PApplet.main(new String[] { "--present",  "--hide-stop", mobiledisco.MobileDisco.class.getName() });
 		} else {
@@ -48,14 +48,13 @@ public class MobileDisco extends PApplet {
 	int shiftX = 250; // verschiebung auf der x achse zur ellipse
 	int black = color(0, 0, 0); 
 	int pink = color(226, 0, 122);
-	String mp3folder = "mp3/"; // ordner mit den songs
 	
 	///////////////////////////////////////////////////////////////////
 
 	// let's set a filter (which returns true if file's extension is .mp3)
 	java.io.FilenameFilter txtFilter = new java.io.FilenameFilter() {
 		public boolean accept(File dir, String name) {
-			return name.toLowerCase().endsWith(".mp3");
+			return name.toLowerCase().endsWith(".mp3") || name.toLowerCase().endsWith(".wav") || name.toLowerCase().endsWith(".aif");
 		}
 	};
 	
@@ -81,7 +80,10 @@ public class MobileDisco extends PApplet {
 		tuioClient = new TuioProcessing(this);
 		//println("the sketch path is "+sketchPath);		
 		//fileNames = listFileNames(sketchPath, txtFilter);
-		fileNames = listFileNames(mp3folder, txtFilter);
+		
+		// mp3 order auswählen & mp3s laden
+		String folderPath = selectFolder();
+		fileNames = listFileNames(folderPath, txtFilter);
 
 		//println(fileNames);
 		println("Loaded " +fileNames.length +" tracks in total");
@@ -91,7 +93,7 @@ public class MobileDisco extends PApplet {
 		// container erstellen
 		trackList = new ArrayList();
 		for (int i = 0; i < fileNames.length; i++) {
-			trackList.add(new trackContainer(this, m, mp3folder+fileNames[i]));
+			trackList.add(new trackContainer(this, m, folderPath+fileNames[i]));
 		}
 		
 		playList = new ArrayList();

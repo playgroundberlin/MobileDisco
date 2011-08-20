@@ -9,8 +9,10 @@ public class trackContainer {
 	boolean ISLOADED = false;
 	boolean ISREMOVED = false;
 	boolean ISPAUSED = false;
+	boolean ADDEDTOPLAYLIST = false;
 	int stopTime = 0;
 	int stopLimit = 100; // zeit bis der track anhält
+	int resetLimit = 500; // zeit bis der track zurückgesetzt wird
 	AudioPlayer player;
 	AudioMetaData meta;
 	public float volume, fadeVol;
@@ -65,10 +67,15 @@ public class trackContainer {
 		}
 		stopTime = 0;
 		ISREMOVED = false;
-		volume = parent.map(v, 0, 250, 0, -30);
-		player.shiftGain(player.getGain(), volume, 500);
+		
+		// volume berechnen
+		volume = parent.map(v, 60, 250, 0, -30);
+		if(volume<-5){ // "toleranten" bereich in der mitte erstellen
+		player.shiftGain(player.getGain(), volume+5, 500);
+		}
 		myVol = (int) player.getGain();
-				
+		//parent.println(myVol);
+
 	}
 
 	void drawCursor() {
@@ -76,14 +83,14 @@ public class trackContainer {
 		position = player.position();
 		playhead = position/length;
 		parent.pushMatrix();
-		parent.fill(130);  
+		parent.fill(160);  
 		parent.rotate(parent.PI);
-		int speed = 5000; // normalwert 360
-		segment(100,0,0-(playhead*speed),9);
+		int speed = 360; // normalwert 360
+		segment(100,0,0-(playhead*speed),6);
 		parent.popMatrix();
 		}
 		parent.pushMatrix();
-		parent.rotate(playhead*1000);
+		parent.rotate(position/400);
 		parent.imageMode(PApplet.CENTER);
 		if(ISPAUSED) {
 			parent.image(((MobileDisco) parent).cursor[0], 0, 0);
@@ -94,12 +101,12 @@ public class trackContainer {
 		parent.popMatrix();
 		
 		parent.fill(130);
-		parent.text(author +" - " +title, 0 , 35);  
+		parent.text(author +" - " +title, 0 , 38);  
 	}
 	
 	void segment(int resolution,float start, float end, float radius) {
 		  parent.beginShape(PApplet.QUAD_STRIP);
-		  float strokeWidth = 1.5f;
+		  float strokeWidth = 3.5f;
 		  for(int i=0;i<resolution;i++) {
 		    float d=parent.radians(parent.map(i,0,resolution-1,start,end));
 		    parent.vertex(parent.sin(d)*radius,parent.cos(d)*radius);
@@ -115,19 +122,27 @@ public class trackContainer {
 				//player.setGain(fadeVol); // volume faden
 				player.shiftGain(player.getGain(), -40, 2000);
 				// println("fading out...");
-				
-
 			}
 			// println(stopTime);
 			if (stopTime >= stopLimit) {
 				player.pause(); // track anhalten
 				parent.println("Paused: " +author +" - " +title);
 				((MobileDisco) parent).myPrinter("Paused: " +author +" - " +title);
-				
+				if(ADDEDTOPLAYLIST == false){
 				((MobileDisco) parent).playList.add(author +" - " +title); // adding to playlist
-
+				ADDEDTOPLAYLIST = true;
+				}
+				//ISREMOVED = false;
+			}
+			
+			if (stopTime >= resetLimit) {
+				player.rewind(); // track zurücksetzen
+				parent.println("Reset: " +author +" - " +title);
+				((MobileDisco) parent).myPrinter("Reset: " +author +" - " +title);
 				ISREMOVED = false;
 			}
 		}
+		
+		
 	}
 }
